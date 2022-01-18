@@ -1,0 +1,58 @@
+html {
+  font-size: 62.5%; // 1rem = 10px --> 10/16(fontsize) = 62.5
+  box-sizing: border-box;
+}
+//******************************************************* COLORS *******************************\\
+
+$light-grey: #cdcccc;
+$main-text: #585757;
+$heading-color: #808080;
+$main-color: #fff;
+$bg-color: #feded9;
+$red-todo: #cd9d9d;
+$blue-todo: #c8dbf3;
+$yellow-todo: #f1e8bc;
+$modal-bg: rgba(0, 0, 0, 0.5);
+$shadow-color: rgba(0, 0, 0, 33%);
+$primary-btn: #786868;
+// ************************************************************************//
+.App {
+  width: 50%;
+  max-height: 95vh;
+  margin: 0 auto;
+  background-color: $bg-color;
+  padding: 1.8rem;
+  padding-bottom: 4rem;
+  padding-right: 5rem;
+}
+.heading-primary {
+  color: $heading-color;
+  font-family: "Pushster-Regular";
+  font-size: 6.8rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.heading-secondary {
+  color: $main-text;
+  font-size: 2rem;
+}
+.add-todo {
+  position: relative;
+
+  span {
+    position: absolute;
+    right: -81px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: $heading-color;
+    background-color: $red-todo;
+    font-size: 4rem;
+    border-radius: 50%;
+    width: 2rem;
+    padding: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+}

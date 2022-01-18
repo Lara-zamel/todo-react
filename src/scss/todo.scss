@@ -1,0 +1,70 @@
+@import "./App.scss";
+
+p.content {
+  font-family: "Vujah-Regular";
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: $main-text;
+  padding-left: 3.5rem;
+}
+.todo {
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid $light-grey;
+  box-shadow: 0 0.5rem $light-grey;
+  background-color: $blue-todo;
+
+  &.blue {
+    background-color: $blue-todo;
+  }
+  &.red {
+    background-color: $red-todo;
+  }
+  &.yellow {
+    background-color: $yellow-todo;
+  }
+  .delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    float: right;
+
+    font-family: cursive;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background-color: $bg-color;
+    color: $main-text;
+    cursor: pointer;
+  }
+  .checkbox-placeholder {
+    display: flex;
+  }
+  .label {
+    position: relative;
+    top: 0.2rem;
+    color: $main-text;
+    font-size: 2rem;
+    font-weight: 500;
+    min-width: 50%;
+    background-color: $main-color;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.checked {
+      text-decoration: line-through;
+      color: $light-grey;
+    }
+  }
+}
+.hidden {
+  display: none;
+}

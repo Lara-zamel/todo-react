@@ -1,0 +1,105 @@
+@import "./App.scss";
+.adding-form {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $modal-bg;
+  display: table;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+
+  .form-container {
+    width: 80rem;
+    min-height: 30rem;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px $shadow-color;
+    transition: all 0.3s ease;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.button {
+      justify-content: flex-end;
+      margin-right: 12rem;
+      margin-top: 2rem;
+    }
+
+    &.color {
+      transform: translate(6.5rem, 0.2rem);
+      height: 5rem;
+    }
+    .label {
+      font-size: 1.5rem;
+      color: $main-text;
+      width: 20%;
+    }
+    .form-input,
+    .form-input:focus,
+    .form-input:focus-visible,
+    .form-input:hover {
+      height: 2rem;
+      border: 2px solid $heading-color;
+      border-radius: 0.3rem;
+      padding: 0.2rem;
+      margin: 1rem;
+      outline: none;
+      width: 50%;
+      &::placeholder {
+        font-size: 1rem;
+        color: $heading-color;
+      }
+    }
+
+    textarea.form-input,
+    textarea.form-input:focus,
+    textarea.form-input:focus-visible,
+    textarea.form-input:hover {
+      height: 8rem;
+      resize: none;
+    }
+    .primary-button {
+      height: 3.5rem;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 3px;
+      background-color: $bg-color;
+      color: $primary-btn;
+
+      &:hover {
+        background-color: #cdaca8;
+        color: #fff;
+      }
+    }
+    .circle {
+      height: 3rem;
+      width: 3rem;
+      border: 2px solid $heading-color;
+      border-radius: 50%;
+      margin-right: 2rem;
+      cursor: pointer;
+      &.selected {
+        height: 3.5rem;
+        width: 3.5rem;
+      }
+      &.red {
+        background-color: $red-todo;
+      }
+      &.blue {
+        background-color: $blue-todo;
+      }
+      &.yellow {
+        background-color: $yellow-todo;
+      }
+    }
+  }
+}

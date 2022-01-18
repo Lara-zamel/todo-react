@@ -1,0 +1,30 @@
+@import "./App.scss";
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  padding: 1px;
+
+  .border {
+    position: relative;
+    border: 2px solid $main-color;
+    border-radius: 0.4rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.8rem;
+  }
+  .indicator {
+    position: absolute;
+    z-index: 1;
+    background-color: $main-color;
+    width: 1.1rem;
+    height: 1.1rem;
+    margin: 0.2rem;
+    transform: scale(0);
+    transition: transform 100ms;
+
+    &.checked {
+      transform: scale(1);
+    }
+  }
+}
